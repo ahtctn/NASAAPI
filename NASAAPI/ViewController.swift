@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     //MARK: YAPILMASI GEREKEN
     /// BU PROJE İÇERİSİNDE YAPILMASI GEREKEN NETWORKING'DE GELEN BU DICTIONARY ÖĞELERİNİN YERLEŞTİRİLMESİ
+    /// 
 
     //MARK: OUTLETS
     @IBOutlet weak var img: UIImageView!
