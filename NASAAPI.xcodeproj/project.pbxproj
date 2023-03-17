@@ -14,6 +14,7 @@
 		7BB7C6D229C49C980038B321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB7C6D129C49C980038B321 /* Assets.xcassets */; };
 		7BB7C6D529C49C980038B321 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB7C6D329C49C980038B321 /* LaunchScreen.storyboard */; };
 		7BB7C6DD29C4B01D0038B321 /* DailyImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7C6DC29C4B01D0038B321 /* DailyImageModel.swift */; };
+		7BB7C6DF29C4C1F00038B321 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7C6DE29C4C1F00038B321 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7BB7C6D429C49C980038B321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BB7C6D629C49C980038B321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB7C6DC29C4B01D0038B321 /* DailyImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyImageModel.swift; sourceTree = "<group>"; };
+		7BB7C6DE29C4C1F00038B321 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				7BB7C6C829C49C960038B321 /* AppDelegate.swift */,
 				7BB7C6CA29C49C960038B321 /* SceneDelegate.swift */,
 				7BB7C6CC29C49C960038B321 /* ViewController.swift */,
+				7BB7C6DE29C4C1F00038B321 /* NetworkController.swift */,
 				7BB7C6CE29C49C960038B321 /* Main.storyboard */,
 				7BB7C6D129C49C980038B321 /* Assets.xcassets */,
 				7BB7C6D329C49C980038B321 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB7C6DF29C4C1F00038B321 /* NetworkController.swift in Sources */,
 				7BB7C6CD29C49C960038B321 /* ViewController.swift in Sources */,
 				7BB7C6C929C49C960038B321 /* AppDelegate.swift in Sources */,
 				7BB7C6CB29C49C960038B321 /* SceneDelegate.swift in Sources */,
