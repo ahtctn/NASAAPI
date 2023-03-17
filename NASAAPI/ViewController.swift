@@ -8,21 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //MARK: YAPILMASI GEREKEN
-    /// BU PROJE İÇERİSİNDE YAPILMASI GEREKEN NETWORKING'DE GELEN BU DICTIONARY ÖĞELERİNİN YERLEŞTİRİLMESİ
-    /// 
-
+    
     //MARK: OUTLETS
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     //MARK: LIFECYLE
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        networking()
+        updateUI()
     }
+    
     //MARK: FUNCTIONS
-    private func networking() {
+    private func fetchPhotos(completion: @escaping (DailyImageModel) -> Void) {
         let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")
         let query: [String: String] = [
             "api_key": "DEMO_KEY",
@@ -30,23 +30,38 @@ class ViewController: UIViewController {
         ]
         
         let queryURL = (baseURL?.withQueries(query))!
-        let queryTask = URLSession.shared.dataTask(with: queryURL) { data, _, error in
+        let jsonQueryTask = URLSession.shared.dataTask(with: queryURL) { data, _, error in
+            let jsonDecoder = JSONDecoder()
+        
             if let data = data {
-                if let responseString = String(data: data, encoding: .utf8){
-                    print(responseString)
+                do {
+                    let dailyImageObject = try jsonDecoder.decode(DailyImageModel.self, from: data)
+                    completion(dailyImageObject)
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
-            if let error = error {
-                print(error.localizedDescription)
-            }
         }
-        queryTask.resume()
+        jsonQueryTask.resume()
     }
     
-    
+    private func updateUI() {
+        
+        self.imgView.layer.cornerRadius = 100
+        self.imgView.layer.masksToBounds = true
+        view.addSubview(imgView)
+        
+        fetchPhotos { photoInformations in
+            guard let urlWithDataFormat = try? Data(contentsOf: photoInformations.url) else { return }
+            DispatchQueue.main.async {
+                self.titleLabel.text = photoInformations.title
+                self.descriptionLabel.text = photoInformations.description
+                self.imgView.image = UIImage(data: urlWithDataFormat)
+            }
+        }
+        
+    }
     //MARK: ACTIONS
-
-
 }
 
 //MARK: EXTENSIONS

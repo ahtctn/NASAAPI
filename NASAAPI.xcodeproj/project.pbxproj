@@ -13,6 +13,7 @@
 		7BB7C6D029C49C960038B321 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB7C6CE29C49C960038B321 /* Main.storyboard */; };
 		7BB7C6D229C49C980038B321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB7C6D129C49C980038B321 /* Assets.xcassets */; };
 		7BB7C6D529C49C980038B321 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB7C6D329C49C980038B321 /* LaunchScreen.storyboard */; };
+		7BB7C6DD29C4B01D0038B321 /* DailyImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB7C6DC29C4B01D0038B321 /* DailyImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7BB7C6D129C49C980038B321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BB7C6D429C49C980038B321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BB7C6D629C49C980038B321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BB7C6DC29C4B01D0038B321 /* DailyImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7BB7C6D129C49C980038B321 /* Assets.xcassets */,
 				7BB7C6D329C49C980038B321 /* LaunchScreen.storyboard */,
 				7BB7C6D629C49C980038B321 /* Info.plist */,
+				7BB7C6DC29C4B01D0038B321 /* DailyImageModel.swift */,
 			);
 			path = NASAAPI;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				7BB7C6CD29C49C960038B321 /* ViewController.swift in Sources */,
 				7BB7C6C929C49C960038B321 /* AppDelegate.swift in Sources */,
 				7BB7C6CB29C49C960038B321 /* SceneDelegate.swift in Sources */,
+				7BB7C6DD29C4B01D0038B321 /* DailyImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
